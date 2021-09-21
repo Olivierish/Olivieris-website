@@ -37,6 +37,8 @@ header{
     .logo{
         color: #332550;
         font-weight: bold;
+        font-size: 1.5em;
+        text-shadow: #8b8b8b 1px 1px 3px;
     }
     ul{
         display: flex;
@@ -72,6 +74,7 @@ header{
     width: 200px;
     font-weight: bold;
     color: #ff64cb;
+    text-shadow: #ffffff 1px 1px 3px;
 
     img{
         height: 30px;
@@ -282,5 +285,19 @@ section{
     }
     .hero .content{
         padding: 9em 20em 6em 20em;
+    }
+}
+
+.circle{
+    animation: circleAnim 1s infinite alternate-reverse;
+}
+@keyframes circleAnim {
+    from{
+        transform: translate(261px, 728px);
+        z-index: index 5;
+    }
+    to{
+        transform: translate(261px, 750px);
+        
     }
 }
