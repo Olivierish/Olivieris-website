@@ -44,7 +44,7 @@ header{
         display: flex;
         a{
             display: block;
-            padding: 0 0.2em;
+            padding: 0 1em;
             /*
             padding: 0 0.4em;
             font-size: 0.90em;
@@ -126,6 +126,7 @@ section{
     font-size: .9em;
     font-weight: 500;
 }
+
 .skills{
     background: #befffb; 
 }
@@ -150,6 +151,19 @@ section{
     .featured-desc{
         margin-bottom: 2em;
     }
+}
+
+.featured::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    /*background: #ffceee;*/
+    background: #ffd5f1;
 }
 .portfolio{
     background: #f7f7f7;
@@ -186,7 +200,9 @@ section{
         grid-gap: 1em;
     }
     .portfolio{
+
         padding-top: 7em;
+    
     }
     .portfolio-container img{
         margin-left: 2em;
@@ -294,7 +310,7 @@ section{
 @keyframes circleAnim {
     from{
         transform: translate(261px, 728px);
-        z-index: index 5;
+        z-index: 5;
     }
     to{
         transform: translate(261px, 750px);
