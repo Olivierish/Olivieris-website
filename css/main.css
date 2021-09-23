@@ -28,6 +28,60 @@ svg{
     height: auto;
 }
 */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #bcfffb;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 8rem;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #6700ee;
+  display: block;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #332550;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  font-size: 2.5em;
+  font-family: "Lato", sans-serif;
+  /*is not charged*/
+  margin-top: 1rem;
+}
+
+#main {
+  -webkit-transition: margin-right .5s;
+  transition: margin-right .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
 .nav-container {
   background: #ecd9ff;
 }
@@ -54,9 +108,7 @@ header .logo {
 }
 
 header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 header ul a {
@@ -67,6 +119,19 @@ header ul a {
             font-size: 0.90em;
             line-height: 2em;
             */
+}
+
+header .openbtn {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ecd9ff;
+  color: #5710ff;
+  border: none;
+}
+
+header .openbtn:hover {
+  color: #332550;
 }
 
 .social-header {
@@ -212,6 +277,14 @@ section {
 }
 
 @media only screen and (min-width: 800px) {
+  .openbtn {
+    display: none;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .featured, .portfolio {
     text-align: left;
   }

@@ -23,6 +23,49 @@ svg{
     height: auto;
 }
 */
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #bcfffb;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 8rem;
+
+    a{
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        font-size: 1.5em;
+        color: #6700ee;
+        display: block;
+        text-align: center;
+        transition: 0.3s;
+    }
+    a:hover{
+        color: #332550;
+    }
+    .closebtn{
+        position: absolute;
+        top: 0;
+        right: 2rem;
+        font-size: 2.5em;
+        font-family: "Lato", sans-serif;
+        /*is not charged*/
+        margin-top: 1rem;
+    }
+}
+#main{
+    transition: margin-right .5s ;
+    // padding: 16px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
 .nav-container{
     background: #ecd9ff;
     a{
@@ -41,7 +84,8 @@ header{
         text-shadow: #8b8b8b 1px 1px 3px;
     }
     ul{
-        display: flex;
+        //display: flex;
+        display: none;
         a{
             display: block;
             padding: 0 1em;
@@ -51,6 +95,19 @@ header{
             line-height: 2em;
             */
         }
+    }
+    .openbtn{
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+        background:#ecd9ff;
+        color: #5710ff;
+        // padding: 10px 15px;
+        border: none;
+    }
+    .openbtn:hover{
+        //background-color: #9932ff;
+        color: #332550;
     }
 }
 .social-header{
@@ -174,6 +231,12 @@ section{
 }
 
 @media only screen and (min-width: 800px){
+    .openbtn{
+        display: none;
+    }
+    header ul{
+        display: flex;
+    }
     .featured, .portfolio{
         text-align: left;
     }
