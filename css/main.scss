@@ -42,7 +42,8 @@ svg{
         color: #6700ee;
         display: block;
         text-align: center;
-        transition: 0.3s;
+        opacity: 1;
+        transition: opacity 0.3s;
     }
     a:hover{
         color: #332550;
@@ -58,7 +59,7 @@ svg{
     }
 }
 #main{
-    transition: margin-right .5s ;
+    //transition: margin-right .5s ;
     // padding: 16px;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -232,6 +233,9 @@ section{
 
 @media only screen and (min-width: 800px){
     .openbtn{
+        display: none;
+    }
+    .sidebar{
         display: none;
     }
     header ul{

@@ -49,8 +49,9 @@ svg{
   color: #6700ee;
   display: block;
   text-align: center;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .sidebar a:hover {
@@ -65,11 +66,6 @@ svg{
   font-family: "Lato", sans-serif;
   /*is not charged*/
   margin-top: 1rem;
-}
-
-#main {
-  -webkit-transition: margin-right .5s;
-  transition: margin-right .5s;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -278,6 +274,9 @@ section {
 
 @media only screen and (min-width: 800px) {
   .openbtn {
+    display: none;
+  }
+  .sidebar {
     display: none;
   }
   header ul {
