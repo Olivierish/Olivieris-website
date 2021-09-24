@@ -32,7 +32,7 @@ svg{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
   background-color: #bcfffb;
@@ -84,6 +84,11 @@ svg{
 
 .nav-container a {
   color: #5710ff;
+  font-weight: bold;
+}
+
+.nav-container a:hover {
+  color: #332550;
 }
 
 header {
@@ -94,6 +99,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2em;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 header .logo {
@@ -128,6 +135,33 @@ header .openbtn {
 
 header .openbtn:hover {
   color: #332550;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.sticky header {
+  padding: 0.5em 2em;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.sticky .social-header {
+  padding: 0.5em 2em;
+  background: #ecd9ff;
+}
+
+.sticky .social-header ul {
+  display: none;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + main {
+  padding-top: 0rem;
 }
 
 .social-header {
@@ -283,6 +317,9 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .featured, .portfolio {
     text-align: left;

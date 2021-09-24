@@ -223,6 +223,21 @@
            //document.getElementById("main").style.marginRight = "0";
            //document.getElementById("openBtn").style.display = "block";
        }
+
+       // When the user scrolls the page, execute myFunction
+       window.onscroll = function(){myFunction()};
+       // Get the navbar
+       let navbarElt = document.querySelector(".nav-container");
+       // Get the offset position of the navbar
+       let sticky = navbarElt.offsetTop;
+       // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset >= sticky + 0.5) {
+            navbarElt.classList.add("sticky")
+        } else {
+            navbarElt.classList.remove("sticky");
+        }
+        }
    </script>
 </body>
 </html>
