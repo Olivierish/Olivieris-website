@@ -121,7 +121,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 
     header{
         padding: 0.5em 2em;
@@ -176,6 +176,24 @@ header{
 section{
     padding: 4em 2em;
     text-align: center;
+
+        .moreBtn{
+            margin-bottom: 25px;
+            padding: 0.6em 1.3em;
+            text-align: center;
+            color: #6700ee;
+            background: white;
+            border: #6700ee 1px solid;
+            border-radius: 5px;
+            font-family: 'Poppins',sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .moreBtn:hover{
+            color: #332550;
+            border: #332550 1px solid;
+
+        }
 }
 .featured{
     position: relative;
@@ -238,6 +256,65 @@ section{
         margin-bottom: 2em;
     }
 }
+.skills-container2{
+    position: relative;
+    //width: 80%;
+    //height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+
+    .skill-card{
+        position: relative;
+        max-width: 300px;
+        height: 215px;
+        background: white;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba($color: #000000, $alpha: 0.5);
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        
+        &:hover{
+            height: 420px;
+
+            .skill-content{
+                visibility: visible;
+                opacity: 1;
+                margin-top: -70px;
+                transition: 0.3s;
+            }
+        }
+        .imgBox{
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 20px;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba($color: #000000, $alpha: 0.2);
+
+            img{
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+        .skill-content{
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
 /*
 .featured::before{
     content: "";
@@ -259,12 +336,18 @@ section{
     margin-bottom: 2em;
 }
 .small-projects{
-    position: relative;
     background: #ffd5f1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.small-projects-container{
+    position: relative;
+    //background: #ffd5f1;
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
-
 
     .card{
         width: 300px;
@@ -336,7 +419,12 @@ section{
     z-index: -1;
     border-radius: 50%;
     /*background: #ffceee;*/
-    background: #ffd5f1;
+    background: #16ffff;
+}
+.small-projects{
+    .more-projects-btn{
+        max-width: 300px;
+    }
 }
 .contact{
     background: #5710ff;
