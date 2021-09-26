@@ -32,7 +32,7 @@ svg{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   right: 0;
   background-color: #bcfffb;
@@ -160,8 +160,8 @@ header .openbtn:hover {
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + main {
-  padding-top: 0rem;
+.sticky + .skills {
+  padding-top: 5rem;
 }
 
 .social-header {
@@ -396,7 +396,7 @@ section .moreBtn:hover {
   background: #f7f7f7;
 }
 
-.portfolio-container a img {
+.portfolio .portfolio-container a img {
   border-radius: 0.5em;
   margin-bottom: 2em;
 }
@@ -418,7 +418,7 @@ section .moreBtn:hover {
           flex-direction: column;
 }
 
-.small-projects-container {
+.small-projects .small-projects-container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,7 +430,7 @@ section .moreBtn:hover {
       flex-wrap: wrap;
 }
 
-.small-projects-container .card {
+.small-projects .small-projects-container .card {
   width: 300px;
   margin: 20px;
   border-radius: 18px;
@@ -455,35 +455,35 @@ section .moreBtn:hover {
   cursor: pointer;
 }
 
-.small-projects-container .card .card-image img {
+.small-projects .small-projects-container .card .card-image img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-.small-projects-container .card .card-text {
+.small-projects .small-projects-container .card .card-text {
   padding: 0px 20px 0px 20px;
   margin-bottom: 15px;
 }
 
-.small-projects-container .card .card-text h2 {
+.small-projects .small-projects-container .card .card-text h2 {
   font-size: 1.0em;
   color: #6700ee;
   text-align: center;
 }
 
-.small-projects-container .card .card-text p {
+.small-projects .small-projects-container .card .card-text p {
   font-size: 0.9em;
   text-align: center;
 }
 
-.small-projects-container .card .card-text .date {
+.small-projects .small-projects-container .card .card-text .date {
   display: block;
   color: #ff64cb;
   font-size: 0.8em;
   text-align: left;
 }
 
-.small-projects-container .card a {
+.small-projects .small-projects-container .card a {
   margin-bottom: 25px;
   padding: 0.6em 1.3em;
   text-align: center;
@@ -496,12 +496,12 @@ section .moreBtn:hover {
   cursor: pointer;
 }
 
-.small-projects-container .card a:hover {
+.small-projects .small-projects-container .card a:hover {
   color: #332550;
   border: #332550 1px solid;
 }
 
-.small-projects-container .card:hover {
+.small-projects .small-projects-container .card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-box-shadow: 1px 1px 10px #c1a0c5;
@@ -527,6 +527,7 @@ section .moreBtn:hover {
 
 .contact {
   background: #5710ff;
+  color: white;
   height: 80vh;
 }
 
