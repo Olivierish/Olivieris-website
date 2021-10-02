@@ -32,7 +32,7 @@ svg{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   right: 0;
   background-color: #bcfffb;
@@ -160,8 +160,8 @@ header .openbtn:hover {
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + main {
-  padding-top: 0rem;
+.sticky + .skills {
+  padding-top: 5rem;
 }
 
 .social-header {
@@ -276,10 +276,13 @@ section .moreBtn:hover {
 }
 
 .skills-container ul li {
+  width: 300px;
   background: white;
-  padding: 2em 1em;
+  padding: 1em 1em;
   border-radius: 1em;
   margin-bottom: 1em;
+  -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+          box-shadow: 1px 1px 5px #d1d1d1;
 }
 
 .skills-container ul li .icon-container {
@@ -291,7 +294,8 @@ section .moreBtn:hover {
 }
 
 .skills-container ul li .icon-container img {
-  border: 1px solid #a065ff;
+  height: 200px;
+  width: 200px;
 }
 
 .skills-container ul li .skill-title {
@@ -299,7 +303,7 @@ section .moreBtn:hover {
 }
 
 .skills-container ul li .featured-desc {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .skills-container2 {
@@ -379,8 +383,7 @@ section .moreBtn:hover {
   transition: 0.3s ease-in-out;
 }
 
-/*
-.featured::before{
+/*.featured::before{
     content: "";
     position: absolute;
     width: 200px;
@@ -396,7 +399,7 @@ section .moreBtn:hover {
   background: #f7f7f7;
 }
 
-.portfolio-container a img {
+.portfolio .portfolio-container a img {
   border-radius: 0.5em;
   margin-bottom: 2em;
 }
@@ -418,7 +421,7 @@ section .moreBtn:hover {
           flex-direction: column;
 }
 
-.small-projects-container {
+.small-projects .small-projects-container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,7 +433,7 @@ section .moreBtn:hover {
       flex-wrap: wrap;
 }
 
-.small-projects-container .card {
+.small-projects .small-projects-container .card {
   width: 300px;
   margin: 20px;
   border-radius: 18px;
@@ -455,35 +458,35 @@ section .moreBtn:hover {
   cursor: pointer;
 }
 
-.small-projects-container .card .card-image img {
+.small-projects .small-projects-container .card .card-image img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-.small-projects-container .card .card-text {
+.small-projects .small-projects-container .card .card-text {
   padding: 0px 20px 0px 20px;
   margin-bottom: 15px;
 }
 
-.small-projects-container .card .card-text h2 {
+.small-projects .small-projects-container .card .card-text h2 {
   font-size: 1.0em;
   color: #6700ee;
   text-align: center;
 }
 
-.small-projects-container .card .card-text p {
+.small-projects .small-projects-container .card .card-text p {
   font-size: 0.9em;
   text-align: center;
 }
 
-.small-projects-container .card .card-text .date {
+.small-projects .small-projects-container .card .card-text .date {
   display: block;
   color: #ff64cb;
   font-size: 0.8em;
   text-align: left;
 }
 
-.small-projects-container .card a {
+.small-projects .small-projects-container .card a {
   margin-bottom: 25px;
   padding: 0.6em 1.3em;
   text-align: center;
@@ -496,12 +499,12 @@ section .moreBtn:hover {
   cursor: pointer;
 }
 
-.small-projects-container .card a:hover {
+.small-projects .small-projects-container .card a:hover {
   color: #332550;
   border: #332550 1px solid;
 }
 
-.small-projects-container .card:hover {
+.small-projects .small-projects-container .card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-box-shadow: 1px 1px 10px #c1a0c5;
@@ -528,7 +531,107 @@ section .moreBtn:hover {
 .contact {
   position: relative;
   background: #5710ff;
-  height: 80vh;
+  color: white;
+}
+
+.contact .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contact-container .content h2 {
+  color: #bcfffb;
+}
+
+.contact .contact-container form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.contact .contact-container form .inputBx {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.contact .contact-container form .inputBx input, .contact .contact-container form .inputBx textarea {
+  width: 100%;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: white;
+  font-family: 'Poppins';
+  border-bottom: 2px solid #bcfffb;
+}
+
+.contact .contact-container form .inputBx input::-webkit-input-placeholder, .contact .contact-container form .inputBx textarea::-webkit-input-placeholder {
+  color: gray;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-family: 'Poppins';
+}
+
+.contact .contact-container form .inputBx input:-ms-input-placeholder, .contact .contact-container form .inputBx textarea:-ms-input-placeholder {
+  color: gray;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-family: 'Poppins';
+}
+
+.contact .contact-container form .inputBx input::-ms-input-placeholder, .contact .contact-container form .inputBx textarea::-ms-input-placeholder {
+  color: gray;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-family: 'Poppins';
+}
+
+.contact .contact-container form .inputBx input::placeholder, .contact .contact-container form .inputBx textarea::placeholder {
+  color: gray;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-family: 'Poppins';
+}
+
+.contact .contact-container form .inputBx textarea {
+  min-height: 200px;
+}
+
+.contact .contact-container form .inputBx input[type="submit"] {
+  margin: 0 auto;
+  max-width: 150px;
+  border: 2px solid #bcfffb;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact .contact-container form .inputBx input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 @media only screen and (min-width: 800px) {
@@ -546,7 +649,7 @@ section .moreBtn:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .featured, .portfolio, .small-projects {
+  .featured, .portfolio, .small-projects, .contact {
     text-align: left;
   }
   .featured, .portfolio-container {
@@ -581,6 +684,9 @@ section .moreBtn:hover {
   }
   .portfolio-container img {
     margin-left: 2em;
+  }
+  .contact .contact-container form {
+    width: 50%;
   }
 }
 
@@ -654,6 +760,21 @@ section .moreBtn:hover {
   .portfolio img {
     float: right;
     max-width: 500px;
+  }
+  .contact .contact-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact .contact-container .content {
+    width: 50%;
+    padding-right: 20px;
+  }
+  .contact .contact-container form {
+    width: 50%;
+    padding-left: 20px;
+    margin-top: 65px;
   }
 }
 
