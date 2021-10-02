@@ -235,10 +235,12 @@ section{
     background: #befffb; 
 }
 .skills-container ul li{
+    width: 300px;
     background: rgb(255, 255, 255);
-    padding: 2em 1em;
+    padding: 1em 1em;
     border-radius: 1em;
     margin-bottom: 1em;
+    box-shadow: 1px 1px 5px rgb(209, 209, 209);
 
     .icon-container{ /*remove this because it disturbs my images*/
         height: auto;
@@ -246,14 +248,17 @@ section{
         place-content: center;
 
         img{
-            border: 1px solid rgb(160, 101, 255);
+            //border: 1px solid rgb(160, 101, 255);
+            //box-shadow: 1px 1px 5px rgb(209, 209, 209);
+            height: 200px;
+            width: 200px;
         }
     }
     .skill-title{
         font-weight: bold;
     }
     .featured-desc{
-        margin-bottom: 2em;
+        margin-bottom: 1em;
     }
 }
 .skills-container2{
@@ -315,8 +320,7 @@ section{
         }
     }
 }
-/*
-.featured::before{
+/*.featured::before{
     content: "";
     position: absolute;
     width: 200px;
@@ -430,10 +434,68 @@ section{
 .contact{
     background: #5710ff;
     color: white;
-    height: 80vh;
 
-    .contact-container .text{
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        //align-items: center;
+        flex-direction: column;
+        .content{
+            h2{
+                color: #bcfffb;
+            }
+        }
+        form{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            
+            .inputBx{
+                margin-bottom: 2em;
+                width: 100%;
+                
+                input, textarea{
+                    width: 100%;
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                    outline: none;
+                    padding: 10px 0;
+                    font-size: 1.1em;
+                    font-weight: 300;
+                    color: white;
+                    font-family: 'Poppins';
+                    border-bottom: 2px solid #bcfffb;
 
+                    &::placeholder{
+                        color: gray;
+                        font-size: 1.1em;
+                        font-weight: 300;
+                        font-family: 'Poppins';
+                    }
+                }
+                textarea{
+                    min-height: 200px;
+                }
+                input[type="submit"]{
+                    margin: 0 auto;
+                    max-width: 150px;
+                    border: 2px solid #bcfffb;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    &:hover{
+                        //color: #ff64cb;
+                        background-color: rgba($color: #ffffff, $alpha: 0.2);
+                    }
+                }
+
+            }
+        }
     }
 }
 @media only screen and (min-width: 800px){
@@ -447,7 +509,7 @@ section{
         display: flex;
         align-items: center;
     }
-    .featured, .portfolio, .small-projects{
+    .featured, .portfolio, .small-projects, .contact{
         text-align: left;
     }
     .featured, .portfolio-container{
@@ -474,12 +536,18 @@ section{
         grid-gap: 1em;
     }
     .portfolio{
-
         padding-top: 7em;
-    
     }
     .portfolio-container img{
         margin-left: 2em;
+    }
+    .contact{
+        .contact-container{
+            form{
+                width: 50%;
+            }
+
+        }
     }
 }
 
@@ -545,6 +613,20 @@ section{
     .portfolio img{
         float: right;
         max-width: 500px;
+    }
+    .contact{
+        .contact-container{
+            flex-direction: row;
+            .content{
+                width: 50%;
+                padding-right: 20px;
+            }
+            form{
+                width: 50%;
+                padding-left: 20px;
+                margin-top: 65px;
+            }
+        }
     }
 }
 
