@@ -21,13 +21,6 @@ img {
   /*oli added*/
 }
 
-/*
-oli added
-svg{ 
-    width: 100%;
-    height: auto;
-}
-*/
 .sidebar {
   height: 100%;
   width: 0;
@@ -456,6 +449,24 @@ section .moreBtn:hover {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   cursor: pointer;
+  /*            a{
+                margin-bottom: 25px;
+                padding: 0.6em 1.3em;
+                text-align: center;
+                color: #6700ee;
+                background: white;
+                border: #6700ee 1px solid;
+                border-radius: 5px;
+                font-family: 'Poppins',sans-serif;
+                font-size: 1em;
+                cursor: pointer;
+            }
+            a:hover{
+                color: #332550;
+                border: #332550 1px solid;
+    
+            }
+        */
 }
 
 .small-projects .small-projects-container .card .card-image img {
@@ -486,29 +497,17 @@ section .moreBtn:hover {
   text-align: left;
 }
 
-.small-projects .small-projects-container .card a {
-  margin-bottom: 25px;
-  padding: 0.6em 1.3em;
-  text-align: center;
-  color: #6700ee;
-  background: white;
-  border: #6700ee 1px solid;
-  border-radius: 5px;
-  font-family: 'Poppins',sans-serif;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.small-projects .small-projects-container .card a:hover {
-  color: #332550;
-  border: #332550 1px solid;
-}
-
 .small-projects .small-projects-container .card:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-box-shadow: 1px 1px 10px #c1a0c5;
           box-shadow: 1px 1px 10px #c1a0c5;
+}
+
+.small-projects .small-projects-container .card:hover .card-text h2 {
+  border-bottom: #ecd0ff dashed 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .small-projects::before {

@@ -16,13 +16,7 @@ img{
     width: 100%;
     height: auto;/*oli added*/
 }
-/*
-oli added
-svg{ 
-    width: 100%;
-    height: auto;
-}
-*/
+
 .sidebar{
     height: 100%;
     width: 0;
@@ -391,7 +385,7 @@ section{
                     text-align: left;
                 }
             }
-            a{
+/*            a{
                 margin-bottom: 25px;
                 padding: 0.6em 1.3em;
                 text-align: center;
@@ -408,9 +402,14 @@ section{
                 border: #332550 1px solid;
     
             }
+        */
             &:hover{
                 transform: scale(1.1);
                 box-shadow: 1px 1px 10px rgb(193, 160, 197);
+            }
+            &:hover .card-text h2{
+                border-bottom: rgb(236, 208, 255) dashed 2px;
+                transition: 0.2s;
             }
         }
     }
