@@ -52,10 +52,12 @@ img{
         margin-top: 1rem;
     }
 }
+/*
 #main{
     //transition: margin-right .5s ;
     // padding: 16px;
 }
+*/
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
@@ -314,19 +316,9 @@ section{
         }
     }
 }
-/*.featured::before{
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 50%;
-    //background: #ffceee;
-    background: #ffd5f1;
-}*/
+
 .portfolio{
+    //position: relative;
     background: #f7f7f7;
 
     .portfolio-container a img{
@@ -334,6 +326,20 @@ section{
         margin-bottom: 2em;
     }
 }
+/*
+.portfolio::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 50%;
+    //background: #ffceee;
+    background: #ffd5f1;
+}
+*/
 .small-projects{
     background: #ffd5f1;
     display: flex;
@@ -343,17 +349,20 @@ section{
 
     .small-projects-container{
         position: relative;
-        //background: #ffd5f1;
         display: flex;
         justify-content:space-evenly;
         flex-wrap: wrap;
+
+        a{
+            text-decoration: none;
+            color: #252525;
+        }
     
         .card{
             width: 300px;
             margin : 20px;
             border-radius: 18px;
             background: rgb(255, 255, 255);
-            //box-shadow: 5px 5px 15px rgb(3, 3, 3);
             box-shadow: 1px 1px 10px rgb(193, 160, 197);
             display: flex;
             justify-content: center;
@@ -373,6 +382,7 @@ section{
                     font-size: 1.0em;
                     color: #6700ee;
                     text-align: center;
+                    transition: .5s;
                 }
                 p{
                     font-size: 0.9em;
@@ -385,30 +395,12 @@ section{
                     text-align: left;
                 }
             }
-/*            a{
-                margin-bottom: 25px;
-                padding: 0.6em 1.3em;
-                text-align: center;
-                color: #6700ee;
-                background: white;
-                border: #6700ee 1px solid;
-                border-radius: 5px;
-                font-family: 'Poppins',sans-serif;
-                font-size: 1em;
-                cursor: pointer;
-            }
-            a:hover{
-                color: #332550;
-                border: #332550 1px solid;
-    
-            }
-        */
             &:hover{
                 transform: scale(1.1);
                 box-shadow: 1px 1px 10px rgb(193, 160, 197);
             }
             &:hover .card-text h2{
-                border-bottom: rgb(236, 208, 255) dashed 2px;
+                border-left: #08ffef solid 2px;
                 transition: 0.2s;
             }
         }

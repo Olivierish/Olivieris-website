@@ -61,6 +61,12 @@ img {
   margin-top: 1rem;
 }
 
+/*
+#main{
+    //transition: margin-right .5s ;
+    // padding: 16px;
+}
+*/
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {
@@ -376,18 +382,6 @@ section .moreBtn:hover {
   transition: 0.3s ease-in-out;
 }
 
-/*.featured::before{
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 50%;
-    //background: #ffceee;
-    background: #ffd5f1;
-}*/
 .portfolio {
   background: #f7f7f7;
 }
@@ -397,6 +391,20 @@ section .moreBtn:hover {
   margin-bottom: 2em;
 }
 
+/*
+.portfolio::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 50%;
+    //background: #ffceee;
+    background: #ffd5f1;
+}
+*/
 .small-projects {
   background: #ffd5f1;
   display: -webkit-box;
@@ -426,6 +434,11 @@ section .moreBtn:hover {
       flex-wrap: wrap;
 }
 
+.small-projects .small-projects-container a {
+  text-decoration: none;
+  color: #252525;
+}
+
 .small-projects .small-projects-container .card {
   width: 300px;
   margin: 20px;
@@ -449,24 +462,6 @@ section .moreBtn:hover {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   cursor: pointer;
-  /*            a{
-                margin-bottom: 25px;
-                padding: 0.6em 1.3em;
-                text-align: center;
-                color: #6700ee;
-                background: white;
-                border: #6700ee 1px solid;
-                border-radius: 5px;
-                font-family: 'Poppins',sans-serif;
-                font-size: 1em;
-                cursor: pointer;
-            }
-            a:hover{
-                color: #332550;
-                border: #332550 1px solid;
-    
-            }
-        */
 }
 
 .small-projects .small-projects-container .card .card-image img {
@@ -483,6 +478,8 @@ section .moreBtn:hover {
   font-size: 1.0em;
   color: #6700ee;
   text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .small-projects .small-projects-container .card .card-text p {
@@ -505,7 +502,7 @@ section .moreBtn:hover {
 }
 
 .small-projects .small-projects-container .card:hover .card-text h2 {
-  border-bottom: #ecd0ff dashed 2px;
+  border-left: #08ffef solid 2px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
