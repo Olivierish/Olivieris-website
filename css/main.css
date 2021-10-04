@@ -187,12 +187,11 @@ header .openbtn:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /*oli added*/
   margin: 0 auto;
   width: 200px;
   font-weight: bold;
-  color: #ff64cb;
-  text-shadow: #ffffff 1px 1px 3px;
+  color: #332550;
+  text-shadow: #afafaf 1px 1px 3px;
 }
 
 .meet img {
@@ -210,24 +209,25 @@ header .openbtn:hover {
 section {
   padding: 4em 2em;
   text-align: center;
-}
+  /*
+        .moreBtn{
+            margin-bottom: 25px;
+            padding: 0.6em 1.3em;
+            text-align: center;
+            color: #6700ee;
+            background: white;
+            border: #6700ee 1px solid;
+            border-radius: 5px;
+            font-family: 'Poppins',sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .moreBtn:hover{
+            color: #332550;
+            border: #332550 1px solid;
 
-section .moreBtn {
-  margin-bottom: 25px;
-  padding: 0.6em 1.3em;
-  text-align: center;
-  color: #6700ee;
-  background: white;
-  border: #6700ee 1px solid;
-  border-radius: 5px;
-  font-family: 'Poppins',sans-serif;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-section .moreBtn:hover {
-  color: #332550;
-  border: #332550 1px solid;
+        }
+        */
 }
 
 .featured {
@@ -270,12 +270,20 @@ section .moreBtn:hover {
   font-weight: 500;
 }
 
+.featured-desc .techno {
+  display: block;
+  margin-top: 5px;
+  color: #ff64cb;
+  color: #11beb3;
+  opacity: .8;
+}
+
 .skills {
   background: #befffb;
 }
 
 .skills-container ul li {
-  width: 300px;
+  max-width: 300px;
   background: white;
   padding: 1em 1em;
   border-radius: 1em;
@@ -299,6 +307,7 @@ section .moreBtn:hover {
 
 .skills-container ul li .skill-title {
   font-weight: bold;
+  color: #5710ff;
 }
 
 .skills-container ul li .featured-desc {
@@ -737,7 +746,7 @@ section .moreBtn:hover {
   }
   .hero .content {
     background: #faf6ff;
-    padding: 6em 8em 6em 4em;
+    padding: 10em 8em 6em 4em;
     text-align: left;
   }
   .hero .content h1 {
@@ -747,7 +756,7 @@ section .moreBtn:hover {
   .hero-design {
     display: unset;
     margin-left: -45%;
-    margin-top: 25%;
+    margin-top: 30%;
     width: 90%;
   }
   .meet {
@@ -785,7 +794,7 @@ section .moreBtn:hover {
     padding: 10em 10em 4em 10em;
   }
   .hero .content {
-    padding: 6em 8em 6em 10em;
+    padding: 10em 8em 6em 10em;
   }
 }
 
@@ -800,7 +809,7 @@ section .moreBtn:hover {
     padding: 6em 20em 4em 20em;
   }
   .hero .content {
-    padding: 9em 20em 6em 20em;
+    padding: 10em 20em 6em 20em;
   }
 }
 

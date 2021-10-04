@@ -151,12 +151,13 @@ header{
 }
 .meet{
     display: flex;
-    justify-content: space-between;/*oli added*/
+    justify-content: space-between;
     margin: 0 auto;
     width: 200px;
     font-weight: bold;
-    color: #ff64cb;
-    text-shadow: #ffffff 1px 1px 3px;
+    //color: #ff64cb;
+    color:#332550;
+    text-shadow: #afafaf 1px 1px 3px;
 
     img{
         height: 30px;
@@ -172,7 +173,7 @@ header{
 section{
     padding: 4em 2em;
     text-align: center;
-
+        /*
         .moreBtn{
             margin-bottom: 25px;
             padding: 0.6em 1.3em;
@@ -190,6 +191,7 @@ section{
             border: #332550 1px solid;
 
         }
+        */
 }
 .featured{
     position: relative;
@@ -225,13 +227,21 @@ section{
     margin-bottom: 3em;
     font-size: .9em;
     font-weight: 500;
+
+    .techno{
+        display: block;
+        margin-top: 5px;    
+        color: #ff64cb;
+        color: rgb(17, 190, 179);
+        opacity: .8;
+    }
 }
 
 .skills{
     background: #befffb; 
 }
 .skills-container ul li{
-    width: 300px;
+    max-width: 300px;
     background: rgb(255, 255, 255);
     padding: 1em 1em;
     border-radius: 1em;
@@ -252,6 +262,7 @@ section{
     }
     .skill-title{
         font-weight: bold;
+        color: #5710ff;
     }
     .featured-desc{
         margin-bottom: 1em;
@@ -585,7 +596,7 @@ section{
 
         .content{
             background: #faf6ff;
-            padding: 6em 8em 6em 4em;
+            padding: 10em 8em 6em 4em;
             text-align: left;
             h1{
                 font-size: 3em;
@@ -596,7 +607,7 @@ section{
     .hero-design{
         display: unset;
         margin-left: -45%;
-        margin-top: 25%;
+        margin-top: 30%;
         width: 90%;
     }
     .meet{
@@ -633,7 +644,7 @@ section{
         padding: 10em 10em 4em 10em;
     }
     .hero .content{
-        padding: 6em 8em 6em 10em;
+        padding: 10em 8em 6em 10em;
     }
 }
 
@@ -648,7 +659,7 @@ section{
         padding: 6em 20em 4em 20em;
     }
     .hero .content{
-        padding: 9em 20em 6em 20em;
+        padding: 10em 20em 6em 20em;
     }
 }
 
