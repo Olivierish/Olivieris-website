@@ -180,15 +180,29 @@ header .openbtn:hover {
   display: none;
 }
 
+.i-am {
+  margin: 0 auto;
+  font-weight: bold;
+  color: #332550;
+  text-shadow: #afafaf 1px 1px 3px;
+}
+
 .meet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   margin: 0 auto;
-  width: 200px;
+  width: 100px;
   font-weight: bold;
   color: #332550;
   text-shadow: #afafaf 1px 1px 3px;
@@ -197,6 +211,7 @@ header .openbtn:hover {
 .meet img {
   height: 30px;
   width: 20px;
+  margin: -10px 10px 0 0;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
@@ -209,8 +224,7 @@ header .openbtn:hover {
 section {
   padding: 4em 2em;
   text-align: center;
-  /*
-        .moreBtn{
+  /*.moreBtn{
             margin-bottom: 25px;
             padding: 0.6em 1.3em;
             text-align: center;
@@ -276,6 +290,11 @@ section {
   color: #ff64cb;
   color: #11beb3;
   opacity: .8;
+}
+
+.featured-desc a {
+  color: #252525;
+  text-decoration: underline;
 }
 
 .skills {
@@ -750,17 +769,21 @@ section {
     text-align: left;
   }
   .hero .content h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 1.2em;
   }
   .hero-design {
     display: unset;
-    margin-left: -45%;
-    margin-top: 30%;
-    width: 90%;
+    margin-left: -37.35%;
+    margin-top: 29.5%;
+    width: 75%;
   }
   .meet {
     margin: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .portfolio img {
     float: right;
