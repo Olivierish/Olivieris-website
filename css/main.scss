@@ -536,6 +536,16 @@ section{
         }
     }
 }
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5005ff;
+
+    p{
+        color: white;
+    }
+}
 @media only screen and (min-width: 800px){
     .openbtn{
         display: none;
