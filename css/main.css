@@ -846,10 +846,17 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .contact .contact-container .content {
     width: 50%;
     padding-right: 20px;
+  }
+  .contact .contact-container .content .about-wrapper div {
+    margin-left: 15px;
+    margin: 0 0 10px 15px;
   }
   .contact .contact-container form {
     width: 50%;
