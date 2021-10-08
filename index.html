@@ -19,7 +19,9 @@
         <a href="#my-portfolio" onclick="closeNav()">My Work</a>
         <a href="#my-skills" onclick="closeNav()">My Skills</a>
         <a href="#my-smallProjects" onclick="closeNav()">Projects</a>
-        <a href="#my-contact" onclick="closeNav()">Contact</a>
+        <a href="#about-me" onclick="closeNav()">About</a>
+        <!-- <a href="#my-contact" onclick="closeNav()">Contact</a> -->
+        <a href="#contact-form" onclick="closeNav()">Contact</a>
     </div>
     <div id="main">
         <div class="nav-container">
@@ -30,7 +32,9 @@
                         <li><a href="#my-portfolio">My Work</a></li>
                         <li><a href="#my-skills">My Skills</a></li>
                         <li><a href="#my-smallProjects">Projects</a></li>
-                        <li><a href="#my-contact">Contact</a></li>
+                        <li><a href="#about-me">About</a></li>
+                        <!-- <li><a href="#my-contact">Contact</a></li> -->
+                        <li><a href="#contact-form">Contact</a></li>
                     </ul>
                 </nav>
                 <button class="openbtn" id="openBtn" onclick="openNav()">☰</button>
@@ -46,8 +50,8 @@
         <div class="hero">
             <div class="content">
                 <!-- stagger1  : a class for animations purpose -->
-                <p class="i-am stagger1">Hi,<br> I'm Olivier Ishimwe</p>
-                <h1 class="stagger1">A HTML, CSS and Javascript Developer.</h1>
+                <p class="i-am stagger1">Hi,<br><br> I'm Olivier Ishimwe</p>
+                <h1 class="stagger1">a HTML, CSS and Javascript Developer.</h1>
                 <div class="meet stagger1">
                     <img src="icons/fingerdown3.png" alt="finger pointing down" height="42" width="27">
                     <p>Meet Me</p>
@@ -225,8 +229,9 @@
         <section class="contact" id="my-contact">
             <div class="contact-container transition3">
                 <div class="content">
-                    <h2 class="heading">About me</h2>
-                    <div class="about-wrapper">
+                    <a class="anchor" id="about-me"></a>
+                    <h2 class="heading" id="labout-me">About me</h2>
+                    <div class="about-wrapper" >
                         <div>
                             <!-- <img src="images/profile-picture.jpg" alt="photo"> -->
                             <img src="images/pp.jpg" alt="photo">
@@ -255,7 +260,7 @@
                     </div>
                 </div>
                 <form>
-                    <h2 class="heading">Contact</h2>
+                    <h2 class="heading" id="contact-form">Contact</h2>
                     <div class="inputBx">
                         <input type="text" name="" placeholder="Name">
                     </div>

@@ -21,6 +21,13 @@ img {
   /*oli added*/
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -200px;
+  visibility: hidden;
+}
+
 .sidebar {
   height: 100%;
   width: 0;
