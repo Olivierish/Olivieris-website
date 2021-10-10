@@ -68,9 +68,8 @@ img {
   margin-top: 1rem;
 }
 
-/*
-#main{
-    //transition: margin-right .5s ;
+/*#main{
+    transition: margin-left .5s ;
     // padding: 16px;
 }
 */
@@ -421,6 +420,16 @@ section {
   background: #f7f7f7;
 }
 
+.portfolio .portfolio-container {
+  border-bottom: #ccb6ff 1px solid;
+  margin-bottom: 2em;
+}
+
+.portfolio .portfolio-container:last-child {
+  border-bottom: unset;
+  margin-bottom: unset;
+}
+
 .portfolio .portfolio-container a img {
   border-radius: 0.5em;
   margin-bottom: 2em;
@@ -575,6 +584,61 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /*form{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            .heading{
+                color: #bcfffb;
+            }
+            
+            .inputBx{
+                margin-bottom: 2em;
+                width: 100%;
+                
+                input, textarea{
+                    width: 100%;
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                    outline: none;
+                    padding: 10px 0;
+                    font-size: 1.1em;
+                    font-weight: 300;
+                    color: white;
+                    font-family: 'Poppins';
+                    border-bottom: 2px solid #bcfffb;
+
+                    &::placeholder{
+                        color: gray;
+                        font-size: 1.1em;
+                        font-weight: 300;
+                        font-family: 'Poppins';
+                    }
+                }
+                textarea{
+                    min-height: 200px;
+                }
+                input[type="submit"]{
+                    margin: 0 auto;
+                    max-width: 150px;
+                    border: 2px solid #bcfffb;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    &:hover{
+                        //color: #ff64cb;
+                        background-color: rgba($color: #ffffff, $alpha: 0.2);
+                    }
+                }
+
+            }
+        }*/
 }
 
 .contact .contact-container .content .heading {
@@ -582,7 +646,8 @@ section {
 }
 
 .contact .contact-container .content .about-wrapper {
-  border-bottom: 1px solid #ff64cb;
+  border-bottom: 1px solid #9365ff;
+  border-bottom: #ff0d0d 1px solid;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
@@ -606,8 +671,17 @@ section {
   letter-spacing: 1px;
 }
 
-.contact .contact-container form {
+.contact .contact-container .social-nets {
   position: relative;
+  width: 100%;
+}
+
+.contact .contact-container .social-nets .heading {
+  color: #bcfffb;
+}
+
+.contact .contact-container .social-nets .social-nets-content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,80 +691,22 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .contact-container .social-nets .social-nets-content a {
+  display: block;
+  margin: 15px 15px 15px 15px;
+  width: 100px;
+}
+
+.contact .contact-container .social-nets .social-nets-content a img {
   width: 100%;
-}
-
-.contact .contact-container form .heading {
-  color: #bcfffb;
-}
-
-.contact .contact-container form .inputBx {
-  margin-bottom: 2em;
-  width: 100%;
-}
-
-.contact .contact-container form .inputBx input, .contact .contact-container form .inputBx textarea {
-  width: 100%;
-  background: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
-  outline: none;
-  padding: 10px 0;
-  font-size: 1.1em;
-  font-weight: 300;
-  color: white;
-  font-family: 'Poppins';
-  border-bottom: 2px solid #bcfffb;
-}
-
-.contact .contact-container form .inputBx input::-webkit-input-placeholder, .contact .contact-container form .inputBx textarea::-webkit-input-placeholder {
-  color: gray;
-  font-size: 1.1em;
-  font-weight: 300;
-  font-family: 'Poppins';
-}
-
-.contact .contact-container form .inputBx input:-ms-input-placeholder, .contact .contact-container form .inputBx textarea:-ms-input-placeholder {
-  color: gray;
-  font-size: 1.1em;
-  font-weight: 300;
-  font-family: 'Poppins';
-}
-
-.contact .contact-container form .inputBx input::-ms-input-placeholder, .contact .contact-container form .inputBx textarea::-ms-input-placeholder {
-  color: gray;
-  font-size: 1.1em;
-  font-weight: 300;
-  font-family: 'Poppins';
-}
-
-.contact .contact-container form .inputBx input::placeholder, .contact .contact-container form .inputBx textarea::placeholder {
-  color: gray;
-  font-size: 1.1em;
-  font-weight: 300;
-  font-family: 'Poppins';
-}
-
-.contact .contact-container form .inputBx textarea {
-  min-height: 200px;
-}
-
-.contact .contact-container form .inputBx input[type="submit"] {
-  margin: 0 auto;
-  max-width: 150px;
-  border: 2px solid #bcfffb;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.contact .contact-container form .inputBx input[type="submit"]:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  height: auto;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  opacity: .7;
 }
 
 footer {
@@ -771,6 +787,12 @@ footer p {
   .contact .contact-container form {
     width: 50%;
   }
+  .contact .contact-container .social-nets .social-nets-content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: -15px;
+  }
 }
 
 @media only screen and (min-width: 1050px) {
@@ -806,7 +828,7 @@ footer p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 7em;
+    width: 8em;
     float: right;
   }
   .social-header ul img {
@@ -856,6 +878,11 @@ footer p {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    /*form{
+                width: 50%;
+                padding-left: 20px;
+                margin-top: 0px;
+            }*/
   }
   .contact .contact-container .content {
     width: 50%;
@@ -865,9 +892,11 @@ footer p {
     margin-left: 15px;
     margin: 0 0 10px 15px;
   }
-  .contact .contact-container form {
+  .contact .contact-container .social-nets {
     width: 50%;
     padding-left: 20px;
+  }
+  .contact .contact-container .social-nets .social-nets-content {
     margin-top: 0px;
   }
 }

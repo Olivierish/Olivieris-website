@@ -16,8 +16,8 @@
 <body>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-        <a href="#my-portfolio" onclick="closeNav()">My Work</a>
-        <a href="#my-skills" onclick="closeNav()">My Skills</a>
+        <a href="#my-portfolio" onclick="closeNav()">Work</a>
+        <a href="#my-skills" onclick="closeNav()">Skills</a>
         <a href="#my-smallProjects" onclick="closeNav()">Projects</a>
         <a href="#about-me" onclick="closeNav()">About</a>
         <!-- <a href="#my-contact" onclick="closeNav()">Contact</a> -->
@@ -29,8 +29,8 @@
                 <a href="./index.html" class="logo">&lt; Olivieris &gt;</a>
                 <nav>
                     <ul>
-                        <li><a href="#my-portfolio">My Work</a></li>
-                        <li><a href="#my-skills">My Skills</a></li>
+                        <li><a href="#my-portfolio">Work</a></li>
+                        <li><a href="#my-skills">Skills</a></li>
                         <li><a href="#my-smallProjects">Projects</a></li>
                         <li><a href="#about-me">About</a></li>
                         <!-- <li><a href="#my-contact">Contact</a></li> -->
@@ -41,8 +41,10 @@
             </header>
             <div class="social-header">
                 <ul>
+                    <li><a href="mailto:olivierish@gmail.com" target="_blank"><img src="icons/emailbis.png" alt="github"></a></li>
                     <li><a href="https://github.com/Olivierish" target="_blank"><img src="icons/github-logo.png" alt="github"></a></li>
-                    <li><a href="#"><img src="icons/instagram.png" alt="instagram"></a></li>
+                    <!-- <li><a href="#"><img src="icons/instagram.png" alt="instagram"></a></li> -->
+                    <li><a href="https://www.linkedin.com/in/olivier-ishimwe-845b0859/" target="_blank"><img src="icons/linkedin.png" alt="linkedin"></a></li>
                     <li><a href="#"><img src="icons/twitter.png" alt="twitter"></a></li>
                 </ul>
             </div>
@@ -102,6 +104,7 @@
                         <p class="skill-title">Frontend development</p>
                         <p class="featured-desc skill-desc">
                             Strong knowledge of HTML5 and CSS3, good knowledge of Javascript.
+                            Responsive web pages - Animation with CSS3 and GSAP JS Library.
                         </p>
                     </li>
                     <li class="transition2">
@@ -115,7 +118,7 @@
                     </li>
                     <li class="transition2">
                         <div class="icon-container one">
-                            <img src="images/other-skills-2.png" alt="other skills" width="200" height="100">
+                            <img src="images/other-skills-4.png" alt="other skills" width="200" height="100">
                         </div>
                         <p class="skill-title">Other Skills</p>
                         <p class="featured-desc skill-desc">
@@ -259,7 +262,7 @@
                         </p>
                     </div>
                 </div>
-                
+                <!--
                 <form>
                     <a class="anchor" id="contact-me"></a>
                     <h2 class="heading" id="contact-form">Contact</h2>
@@ -275,13 +278,23 @@
                     <div class="inputBx">
                         <input type="submit" value="Send" name="">
                     </div>
-                </form>
+                </form>-->
+                <div class="social-nets">
+                    <a class="anchor" id="contact-me"></a>
+                    <h2 class="heading" id="contact-form">Contact</h2>
+                    <div class="social-nets-content">
+                        <a href="mailto:olivierish@gmail.com" target="_blank"><img src="icons/emailbis.png" alt="email"></a>
+                        <a href="https://github.com/Olivierish" target="_blank"><img src="icons/github-logo.png" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/olivier-ishimwe-845b0859/" target="_blank"><img src="icons/linkedin.png" alt="linkedin"></a>
+                        <a href="#" target="_blank"><img src="icons/twitter.png" alt="twitter"></a>  
+                    </div>
+                </div>
 
             </div>
         </section>
         <footer>
             <p>
-                © 2021 Olivier Ishimwe
+                © Copyright 2021 Olivier Ishimwe
             </p>
         </footer>
     </div>
@@ -345,7 +358,7 @@
         sidebarElt.style.width = "250px";
         const linksElts = sidebarElt.querySelectorAll("a");
         linksElts.forEach(element => element.style.opacity = "1");
-        //document.getElementById("main").style.marginRight = "250px";
+        //document.getElementById("main").style.marginLeft = "-250px";
         //document.getElementById("openBtn").style.display = "none";
 
        }
@@ -353,7 +366,7 @@
            const linksElts = sidebarElt.querySelectorAll("a");
            linksElts.forEach(element => element.style.opacity = "0");
            sidebarElt.style.width = "0";
-           //document.getElementById("main").style.marginRight = "0";
+           //document.getElementById("main").style.marginLeft = "0";
            //document.getElementById("openBtn").style.display = "block";
        }
 
