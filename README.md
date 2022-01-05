@@ -1,2 +1,2 @@
 # Olivieris-website
-Welcome to my Web page, here you can find some of my projects.
+Welcome to my Portfolio, here you will find some of my projects.
